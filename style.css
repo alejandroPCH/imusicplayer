@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #630303;
+    display: grid;
+    grid-template: 1fr 5fr 1fr / 1fr 5fr 1fr;
+    grid-gap:5%;
+}
+
+     .circle{
+
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         background: #690707;
+         box-shadow:  21px 21px 42px #440505,
+                      -21px -21px 42px #8e0909;
+        flex-wrap: nowrap;
+                    }
+
+
