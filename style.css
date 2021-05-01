@@ -33,7 +33,7 @@ body{
     .portada{
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         grid-row: 2;
          grid-column: 2;
          
@@ -53,7 +53,8 @@ max-width:clamp(60ch,100%,75ch);
     
         animation: rotate 3s linear infinite;
         animation-play-state: paused;
-}
+        
+    }
 
 /* if the container have a class "start" it will start spinning*/
 .start .portada img{
@@ -94,6 +95,11 @@ animation-play-state: running;
     .start #music-title{
     opacity: 1;
     transform: translateY(-50%);
+}
+
+.navigation-step #music-title{
+    opacity: 0;
+transition: none;
 }
 
 .bar__music-progress{
@@ -208,6 +214,7 @@ animation-play-state: running;
     display: inline-block;
 
 }
+
 
 .buttons__love{
     position: relative;
