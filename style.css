@@ -14,7 +14,7 @@ body{
     width: 100vw;
     background-color: #630303;
     display: grid;
-    grid-template: 1fr 5fr 1fr / 1fr 5fr 1fr;
+    grid-template: 1fr 4fr 1fr 2fr/ 1fr 5fr 1fr;
     grid-gap:5%;
 }
 
@@ -27,29 +27,92 @@ body{
     grid-column: 2 / 3 ;
     font-family: 'Courier New', Courier, monospace;
     color: whitesmoke;
-    font-size: clamp(2rem,2.3vw,10rem);
 
 }
 
     .portada{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         grid-row: 2;
          grid-column: 2;
-  
+         
        
 
     }
     
     .portada img{
-      
-min-width: clamp(35ch,100%,45ch);
-min-height: clamp(45ch,100%,45ch);
-max-height:clamp(60ch,100%,70ch);
-max-width:clamp(60ch,100%,70ch); 
-     }
-     
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+min-width: clamp(40ch,100%,40ch);
+min-height: clamp(35ch,100%,40ch);
+max-height:clamp(60ch,100%,80ch);
+max-width:clamp(60ch,100%,75ch); 
+
+    /* "rotate" is a keiframe that you created, it could be the name you want */
+    
+        animation: rotate 3s linear infinite;
+        animation-play-state: paused;
+}
+
+/* if the container have a class "start" it will start spinning*/
+.start .portada img{
+animation-play-state: running;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg)
+    }
+}
+    
+
+.bar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    grid-row:3;
+}
+
+#music-title{
+    
+   font-size: clamp(2rem,2.3vw,10rem);
+      margin:clamp(1ch,100%,1ch) 0;
+    color: #f7f7f7;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+    .start #music-title{
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.bar__music-progress{
+    border-radius: 5px;
+    height: 0.4vh;
+    width: 100%;
+    background-color: #690707;
+}
+
+.music-progress__progress{
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+    background-color: #8e0909;
+
+}
+
+
     .buttons{
          
         margin-bottom:clamp(5ch,100%,10ch);
@@ -59,17 +122,17 @@ max-width:clamp(60ch,100%,70ch);
 
         display: flex;
         flex-direction: row;
-        grid-row: 3 / 3;
+        grid-row: 4;
         grid-column: 1 / 3 span ;
         
         
         
      }
      button{
-        min-height:clamp(3ch,100%,6ch);
-        min-width:clamp(3ch,100%,6ch);
-        max-width: clamp(20ch,100%,20ch);
-        max-height: clamp(20ch,100%,20ch);
+        min-height:clamp(5.5ch,100%,5.5ch);
+        min-width:clamp(5.5ch,100%,5.5ch);
+        max-width: clamp(13ch,100%,13ch);
+        max-height: clamp(13ch,100%,13ch);
         width: 6vw;
         height: 6vw;
         aspect-ratio: 1 / 1;
@@ -93,10 +156,10 @@ max-width:clamp(60ch,100%,70ch);
     }    
  
     .buttons__play{
-        max-width: clamp(30ch,100%,30ch);
-        max-height: clamp(30ch,100%,30ch);
-        min-height:clamp(10ch,100%,10ch);
-        min-width:clamp(10ch,100%,10ch);
+        max-width: clamp(20ch,100%,20ch);
+        max-height: clamp(20ch,100%,20ch);
+        min-height:clamp(9ch,100%,9ch);
+        min-width:clamp(9ch,100%,9ch);
         width: 10vw;
         height: 10vw;
         aspect-ratio: 1 / 1;

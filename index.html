@@ -7,32 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="start">
     
 <section class="title">
     <h1>Play now!</h1>
 </section>
 
 <section class="portada">   
-        <img  src="./assets/images/portada.png" alt="Portada The Man Who Sold The World" srcset="">
+        <img  src="./assets/images/portada.png" alt="Portada The Man Who Sold The World" srcset="" id="album">
     </section>   
+
+
+<section class="bar">
+<div class="bar__music-info">
+        <h2 id="music-title">Nirvana - The Man Who Sold The World</h2>
+        <div class="bar__music-progress">
+            <div class="music-progress__progress"></div>
+        </div>
+</div>
+    
+<audio src="./assets/music/Nirvana - The Man Who Sold The World (MTV Unplugged).m4a" id="audio"></audio>
+
+</section>
 
 
 <section class="buttons">
 
-<button class="buttons__repeat"><span class="repeat"></span></button>
+<button class="buttons__repeat" id="repeat"><span class="repeat"></span></button>
 
 
-<button class="buttons__backward"><span class="backward"></span></button>
+<button class="buttons__backward" id="backward"><span class="backward"></span></button>
 
 
-<button class="buttons__play"> <span href="#" class="play"></span></button>
+<button class="buttons__play" id="play"> <span href="#" class="play"></span></button>
 
 
-<button class="buttons_forward"> <span class="forward"></span></button>
+<button class="buttons_forward" id="forward"> <span class="forward"></span></button>
 
 
-<button class="buttons__love"> <span href="#" class="love"></span></button>
+<button class="buttons__love" id="love"> <span href="#" class="love"></span></button>
 
 </section>
 
