@@ -67,6 +67,8 @@ function repeatSong(){
 }
 
 function nextSong(){
+    // restart the progress bar
+    musicProgress.style.width='0%'
 
         songIndex++
         mediaPlayer.classList.add('navigation-step')
@@ -80,7 +82,7 @@ function nextSong(){
 
 function previousSong(){
     
-
+    musicProgress.style.width='0%'
         //remerber that songIndex is the index("i") in the array of songs, is this variable is 0 it will reproduce The Man Who Sold The World, and so on
         songIndex--
         mediaPlayer.classList.add('navigation-step')
