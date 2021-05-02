@@ -4,7 +4,8 @@
     margin:clamp(1ch,100%,1ch) 0;
   }
 .album img{
-   
+    min-height: 40vh;
+    min-width: 40vh;
     max-width: clamp(40ch,40vh,150ch);
     max-height: clamp(40ch,40vh,150ch);
    
