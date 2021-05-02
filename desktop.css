@@ -1,0 +1,11 @@
+#music-title{
+    
+    font-size: clamp(1.7rem,1.5vw,40rem);
+    margin:clamp(1ch,100%,1ch) 0;
+  }
+.album img{
+   
+    max-width: clamp(40ch,40vh,150ch);
+    max-height: clamp(40ch,40vh,150ch);
+   
+}

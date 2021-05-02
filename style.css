@@ -6,12 +6,12 @@
 
 html{
     font-size: 62.5%;
-    overflow: hidden ;
+    overflow-x: hidden ;
     font-family: sans-serif;
 }
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 
     height: 100vh;
     width: 100vw;
@@ -47,11 +47,12 @@ body{
     
 .album img{
         aspect-ratio: 1 / 1;
+       
         border-radius: 50%;
 min-width: clamp(40ch,100%,40ch);
 min-height: clamp(35ch,100%,40ch);
-max-height:clamp(60ch,100%,80ch);
-max-width:clamp(60ch,100%,75ch); 
+max-height:clamp(40ch,100%,50ch);
+max-width:clamp(40ch,100%,35ch); 
 
     /* "rotate" is a keiframe that you created, it could be the name you want */
     
@@ -125,7 +126,7 @@ transition: none;
 
     .buttons{
         position: relative;
-        top:-2vw;
+        top:-0.5vw;
         margin-bottom:clamp(10ch,100%,10ch);
         
         align-items: center;
@@ -143,10 +144,10 @@ transition: none;
          border:none;
         min-height:clamp(5.5ch,100%,5.5ch);
         min-width:clamp(5ch,100%,5.5ch);
-        max-width: clamp(12ch,100%,12ch);
-        max-height: clamp(12ch,100%,12ch);
-        width: 13vw;
-        height: 13vw;
+        max-width: clamp(10ch,100%,10ch);
+        max-height: clamp(10ch,100%,10ch);
+        width: 10vw;
+        height: 10vw;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         background: #630303;
@@ -169,12 +170,12 @@ transition: none;
     }    
  
     .buttons__play{
-        max-width: clamp(15ch,100%,15ch);
-        max-height: clamp(15ch,100%,15ch);
+        max-width: clamp(14ch,100%,14ch);
+        max-height: clamp(14ch,100%,14ch);
         min-height:clamp(9ch,100%,9ch);
         min-width:clamp(9ch,100%,9ch);
-        width: 17vw;
-        height: 17vw;
+        width: 14vw;
+        height: 14vw;
         aspect-ratio: 1 / 1;
         
         z-index: 2;
