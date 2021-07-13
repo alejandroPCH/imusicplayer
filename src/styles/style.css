@@ -196,10 +196,8 @@ button {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: #630303;
-  -webkit-box-shadow: 5px -5px 10px #4e0202,
- -2px 5px 10px #780404;
-          box-shadow: 5px -5px 10px #4e0202,
- -2px 5px 10px #780404;
+  -webkit-box-shadow: 5px -5px 10px #4e0202, -2px 5px 10px #780404;
+          box-shadow: 5px -5px 10px #4e0202, -2px 5px 10px #780404;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }

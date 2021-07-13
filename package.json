@@ -2,7 +2,7 @@
   "name": "reproductor_musica",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/alejandropch/mediaplayer.git"
   },
-  "keywords": [],
+  "keywords": [  "JavaScript",
+    "Sass"],
   "author": "alejandro <alejandropachas1@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alejandropch/mediaplayer/issues"
   },
-  "homepage": "https://github.com/alejandropch/mediaplayer#readme"
+  "homepage": "https://alejandropch.github.io/imusicplayer/"
 }
