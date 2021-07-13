@@ -24,8 +24,8 @@ loadSong(songs[songIndex])
 function loadSong(song){
 
 title.innerText=song
-audio.src=`assets/music/${song}.m4a`
-album.src=`assets/images/${song}.png`
+audio.src=`../assets/music/${song}.m4a`
+album.src=`../assets/images/${song}.png`
 
 }
 
@@ -46,7 +46,7 @@ function playSong(){
     mediaPlayer.classList.add('start')
     document.querySelector(".play").style.marginLeft="-1%";
 
-    document.querySelector(".play").style.backgroundImage="url('./assets/icons/media-pause.svg')"
+    document.querySelector(".play").style.backgroundImage="url('../assets/icons/media-pause.svg')"
   
     audio.play()
 }
@@ -56,7 +56,7 @@ function pauseSong(){
 
     document.querySelector(".play").style.marginLeft="7%";
 
-    document.querySelector(".play").style.backgroundImage="url('./assets/icons/media-play.svg')"
+    document.querySelector(".play").style.backgroundImage="url('../assets/icons/media-play.svg')"
 
     audio.pause()
 }

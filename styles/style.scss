@@ -88,6 +88,22 @@ animation-play-state: running;
     justify-content: center;
     grid-column: 2;
     grid-row:3;
+
+    &__music-progress{
+        border-radius: 5px;
+        height: 0.4vh;
+        width: 100%;
+        background-color: #690707;
+
+        .music-progress__progress{
+            border-radius: 5px;
+            height: 100%;
+            width: 0%;
+            transition: width 0.1s linear;
+            background-color: #8e0909;
+        
+        }
+    }
 }
 
 #music-title{
@@ -109,21 +125,9 @@ animation-play-state: running;
 transition: none;
 }
 
-.bar__music-progress{
-    border-radius: 5px;
-    height: 0.4vh;
-    width: 100%;
-    background-color: #690707;
-}
 
-.music-progress__progress{
-    border-radius: 5px;
-    height: 100%;
-    width: 0%;
-    transition: width 0.1s linear;
-    background-color: #8e0909;
 
-}
+
 
 
     .buttons{

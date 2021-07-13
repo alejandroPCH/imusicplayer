@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: #630303;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 4fr 1fr 2fr;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template: 1fr 4fr 1fr 2fr/ 1fr 5fr 1fr;
+  grid-gap: 5%;
+}
+
+@media (orientation: landscape) {
+  body {
+    overflow-y: visible;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(0.8rem, 2.3vw, 2rem);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  color: whitesmoke;
+}
+
+.album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.album img {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  min-width: clamp(40ch, 100%, 40ch);
+  min-height: clamp(35ch, 100%, 40ch);
+  max-height: clamp(40ch, 100%, 50ch);
+  max-width: clamp(40ch, 100%, 35ch);
+  /* "rotate" is a keiframe that you created, it could be the name you want */
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+/* if the container have a class "start" it will start spinning*/
+.start .album img {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.bar {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.bar__music-progress {
+  border-radius: 5px;
+  height: 0.4vh;
+  width: 100%;
+  background-color: #690707;
+}
+
+.bar__music-progress .music-progress__progress {
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+  background-color: #8e0909;
+}
+
+#music-title {
+  font-size: clamp(1.5rem, 2.3vw, 5rem);
+  margin: clamp(1ch, 100%, 1ch) 0;
+  color: #f7f7f7;
+  opacity: 0;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.start #music-title {
+  opacity: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navigation-step #music-title {
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.buttons {
+  position: relative;
+  top: -2vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  grid-column: 1 / 3 span;
+}
+
+button {
+  border: none;
+  min-height: clamp(5.5ch, 100%, 5.5ch);
+  min-width: clamp(5ch, 100%, 5.5ch);
+  max-width: clamp(5vw, 100%, 5vw);
+  max-height: clamp(5vw, 100%, 5vw);
+  width: 8vw;
+  height: 8vw;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #630303;
+  -webkit-box-shadow: 5px -5px 10px #4e0202,
+ -2px 5px 10px #780404;
+          box-shadow: 5px -5px 10px #4e0202,
+ -2px 5px 10px #780404;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+button span {
+  margin: auto;
+  width: 50%;
+  height: 50%;
+}
+
+.buttons__repeat, .buttons__love {
+  position: relative;
+  top: -15%;
+}
+
+.buttons__play {
+  max-width: clamp(7vw, 100%, 7vw);
+  max-height: clamp(7vw, 100%, 7vw);
+  min-height: clamp(9ch, 100%, 9ch);
+  min-width: clamp(9ch, 100%, 9ch);
+  width: 10vw;
+  height: 10vw;
+  aspect-ratio: 1 / 1;
+  z-index: 2;
+}
+
+.repeat {
+  background-image: url(../assets/icons/media-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+
+.backward {
+  background-image: url(../assets/icons/media-step-backward.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+
+.play {
+  margin-left: 7px;
+  background-image: url(../assets/icons/media-play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 67%;
+  height: 67%;
+  display: inline-block;
+}
+
+.forward {
+  background-image: url(../assets/icons/media-step-forward.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+
+.love {
+  background-image: url(../assets/icons/media-heart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */
