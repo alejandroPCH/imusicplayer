@@ -187,6 +187,7 @@ body {
 
 button {
   border: none;
+  cursor: pointer;
   min-height: clamp(5.5ch, 100%, 5.5ch);
   min-width: clamp(5ch, 100%, 5.5ch);
   max-width: clamp(5vw, 100%, 5vw);
